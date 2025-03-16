@@ -1,16 +1,18 @@
-ping 8.8.8.8 -n 2 > nul
-if %errorlevel% == 0 (
-More?     echo Internetanslutning OK
-More? ) else (
-More?     echo Ingen internetanslutning. Försök starta om routern.
-More? )
-Internetanslutning OK
+#!/bin/bash
 
-ping 192.168.10.1 -n 2 > nul
-if %errorlevel% == 0 (
-More?     echo Lokalt nätverk fungerar
-More? ) else (
-More?     echo Problem med lokalt nätverk. Kontrollera routern.
-More?     echo Kör "ipconfig" för att hitta din gateway och testa att pinga den.
-More? )
-Lokalt nätverk fungerar
+# Kontrollera internetanslutning
+ping -n 2 8.8.8.8 > /dev/null
+if [ $? -eq 0 ]; then
+    echo "Internetanslutning OK"
+else
+    echo "Ingen internetanslutning. Försök starta om routern."
+fi
+
+# Kontrollera lokalt nätverk
+ping -n 2 192.168.10.1 > /dev/null
+if [ $? -eq 0 ]; then
+    echo "Lokalt nätverk fungerar"
+else
+    echo "Problem med lokalt nätverk. Kontrollera routern."
+    echo "Kör 'ipconfig' för att hitta din gateway och testa att pinga den."
+fi
