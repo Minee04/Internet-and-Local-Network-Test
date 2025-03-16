@@ -1,0 +1,12 @@
+2025-03-16 15:43:55,79 - Internetanslutning OK 
+2025-03-16 15:43:56,84 - Lokalt nätverk fungerar 
+2025-03-16 15:44:01,10 - Internetanslutning OK 
+2025-03-16 15:44:02,14 - Lokalt nätverk fungerar 
+2025-03-16 15:44:14,30 - Internetanslutning OK 
+2025-03-16 15:44:15,34 - Lokalt nätverk fungerar 
+2025-03-16 15:45:01,62 - Internetanslutning OK 
+2025-03-16 15:45:01,65 - Problem med lokalt nätverk. Kontrollera routern. 
+2025-03-16 15:45:32,10 - Internetanslutning OK 
+2025-03-16 15:45:33,14 - Lokalt nätverk fungerar 
+2025-03-16 15:49:54,56 - Internetanslutning OK 
+2025-03-16 15:49:55,59 - Lokalt nätverk fungerar 
