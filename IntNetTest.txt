@@ -1,0 +1,19 @@
+# Kontrollera om datorn har internetanslutning
+$pingResult = Test-Connection -ComputerName 8.8.8.8 -Count 2 -Quiet
+
+if ($pingResult) {
+    Write-Host "Internetanslutning OK" -ForegroundColor Green
+} else {
+    Write-Host "Ingen internetanslutning. Försök starta om routern." -ForegroundColor Red
+}
+
+# Kontrollera lokalt nätverk
+$localPing = Test-Connection -ComputerName 192.168.10.1 -Count 2 -Quiet
+
+if ($localPing) {
+    Write-Host "Lokalt nätverk fungerar" -ForegroundColor Green
+} else {
+    Write-Host "Problem med lokalt nätverk. Kontrollera routern." -ForegroundColor Red
+    # Tips: Hitta din gateway med 'ipconfig' och testa att pinga den adressen.
+    Write-Host "Kör 'ipconfig' för att hitta din gateway och testa att pinga den." -ForegroundColor Yellow
+}
